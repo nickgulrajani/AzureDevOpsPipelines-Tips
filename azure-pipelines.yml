@@ -24,5 +24,3 @@ steps:
     backendAzureRmResourceGroupName: 'nic-resourcegroup-tfstate'
     backendAzureRmStorageAccountName: 'nicterraformtfstateskip'
     backendAzureRmContainerName: 'tfstate'
-
--
