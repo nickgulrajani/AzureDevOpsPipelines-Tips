@@ -13,9 +13,6 @@ variables:
   anyTfChanges: false
 
 steps:
-- task: devlabs.custom-terraform-tasks.custom-terraform-installer-task@0
-  inputs:
-    terraformVersion: 'latest'
 - task: TerraformTaskV1@0
   inputs:
     provider: 'azurerm'
