@@ -17,8 +17,8 @@ variables:
   inputs:
     terraformVersion: '0.12.28'
 
-- task: TerraformTaskV1@0
-  displayName: terraform init
+- task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
+  displayName: 'terraform init'
   inputs:
     provider: 'azurerm'
     command: 'init'
@@ -29,8 +29,8 @@ variables:
     backendAzureRmContainerName: '$(container)'
     backendAzureRmKey: '$(tfstateFile)'
 
-- task: TerraformTaskV1@0
-  displayName: terraform plan -out=tfplan
+- task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
+  displayName: 'terraform plan -out=tfplan'
   inputs:
     provider: 'azurerm'
     command: 'plan'
@@ -59,8 +59,8 @@ variables:
         Write-Host "There is no change detected in Terraform tfplan file"
       }
 
-- task: TerraformTaskV1@0
-  displayName: terraform apply tfplan
+- task: ms-devlabs.custom-terraform-tasks.custom-terraform-release-task.TerraformTaskV1@0
+  displayName: 'terraform apply tfplan'
   condition: eq(variables.anyTfChanges, true)
   inputs:
     provider: 'azurerm'
