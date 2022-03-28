@@ -13,7 +13,7 @@ variables:
   anyTfChanges: false
 
 - task: charleszipp.azure-pipelines-tasks-terraform.azure-pipelines-tasks-terraform-installer.TerraformInstaller@0
-  displayName: install Terraform v0.12.28
+  displayName: 'install Terraform v0.12.28'
   inputs:
     terraformVersion: '0.12.28'
 
