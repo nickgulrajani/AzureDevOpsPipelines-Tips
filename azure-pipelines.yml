@@ -6,8 +6,8 @@ pool:
 
 variables:
   subscription: Visual Studio Enterprise(17b12858-3960-4e6f-a663-a06fdae23428)
-  resourceGroup: nic-resourcegroup-tfstate
-  storageAccount: nicterraformtfstateskip
+  resourceGroup: resourcegroup-tfstate
+  storageAccount: tformtfstateskip
   container: tfstate
   tfstateFile: terraform.tfstate
   anyTfChanges: false
